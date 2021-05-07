@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pesquisa</title>
+</head>
+<body>
+    <header>
+        <h1>Site.com</h1>
+        <form id="options" action="/pesquisa" method="POST">
+        <input type="search" name="search">
+        <button type="submit"><img src="#" alt=""></button>
+        </form>
+    </header>
+    <button id="back"><img src="../img/left-back-arrow-svgrepo-com.svg" alt=""></button>
+    <section>
+    
+    <% for(var i=0; i<content.length; i++) {%>
+        <div class="noticia">
+            <h1><%=content[i].title%></h1>
+            <p><%=content[i].texto%></p>
+        </div>
+     <%}%>
+    </section>
+    <script src="../js/noticias.js"></script>
+</body>
+</html>
